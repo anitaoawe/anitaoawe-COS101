@@ -9,3 +9,4 @@ fn main() {
 	let ci = a-p;
 	println!("Compound Interest is {}",ci);
 	}
+	
