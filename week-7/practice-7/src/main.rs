@@ -19,4 +19,3 @@ fn main(){
     println!("\nArray with default values");
     println!("array is {:?}",arr3);
     println!("array size is :{}",arr3.len());
-}
