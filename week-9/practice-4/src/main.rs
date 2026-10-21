@@ -1,13 +1,14 @@
+use std::fs::OpenOptions;
 use std::io::Write;
 
 fn main() {
 
-    let announce = "Week 9 - Rust File Input and Output\n";
-    let dept = "Department of Computer Science";
+    let mut file = OpenOptions::new().append(true).open("data.txt").expect(
+        "cannot open file because you pay 100k school fees");
+    file.write_all("\nHello Class".as_bytes()).expect("write failed");
+    file.write_all("This is the appendage to the document."
+        .as_bytes()).expect("write failed because you are paying 100k school fees");
+    println!("file append success");
 
-    let mut file = std::fs::File::create("data.txt").expect("create failed");
-    file.write_all("Welcome to Rust Programming\n".as_bytes()).expect("write failed");
-    file.write_all(announce.as_bytes()).expect("write failed");
-    file.write_all(dept.as_bytes()).expect("write failed");
-    println!("\nData written to file.");
+
 }
