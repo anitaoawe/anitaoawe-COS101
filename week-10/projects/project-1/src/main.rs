@@ -4,7 +4,7 @@ struct Laptop{
 }
 
 impl Laptop {
-    fn total_three(&self, quantity: u32) -> u32{
+    fn total_by(&self, quantity: u32) -> u32{
         return self.price * quantity;
     }
 }
@@ -40,8 +40,8 @@ fn main() {
     let mut final_cost:u32 = 0;
 
     for i in brands{
-        println!("The total cost for {} is {}", i.brand, i.total_three(quantity));
-        final_cost += i.total_three(quantity)
+        println!("The total cost for {} is {}", i.brand, i.total_by(quantity));
+        final_cost += i.total_by(quantity)
     };
 
     println!("The final cost is {} for all the laptops.", final_cost );
