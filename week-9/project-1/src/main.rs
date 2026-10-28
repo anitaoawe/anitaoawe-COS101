@@ -11,4 +11,5 @@ fn main() {
     file.write_all("\n Heineken, , ".as_bytes()).expect("Couldnt Write because you are paying 100k school fees");
     file.write_all("\n Star, , ".as_bytes()).expect("Couldnt Write because you are paying 100k school fees");
     
+    
 }
